@@ -64,3 +64,4 @@
         creditsDisplay.textContent = totalCredits;
     }
 });
+
