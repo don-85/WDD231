@@ -1,3 +1,34 @@
+ @media (min-width: 768px) {
+    #menu-button {
+        display: none;
+    }
+    
+    nav {
+        display: block;
+        background-color: #yourColor;
+    }
+    
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    nav li {
+        border-bottom: none;
+    }
+    
+    nav a:hover {
+        color: #yourColor;
+        text-decoration: underline;
+    }
+    
+    .course-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1rem;
+    }
+}
+
 /* This file only contains media queries */
 @media (min-width: 768px) {
   /* Desktop navigation */
