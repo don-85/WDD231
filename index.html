@@ -21,125 +21,80 @@
 <body>
     <header>
         <div class="logo-container">
-            <img src="images/logo.svg" alt="Course Logo">
+            <img src="images/logo.jpg" alt="Course Logo">
             <span>Muntu Titus</span>
         </div>
-        <button id="menu-button" aria-label="Toggle Navigation">☰</button>
+        <!-- <button id="menu-button" aria-label="Toggle Navigation">☰</button> -->
     </header>
 
     <nav>
         <ul id="primary-nav">
             <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="#">Chamber</a></li>
-            <li><a href="#">Final</a></li>
+            <li><a href="#">Chamber Project</a></li>
+            <li><a href="#">Final Project</a></li>
         </ul>
     </nav>
 
     <main>
         <h1>Home</h1>
+<section class="about-me" aria-labelledby="about-heading">
 
-        <section class="about-me" aria-labelledby="about-heading">
-            <h2 id="about-heading">Hello, I'm Muntu Titus</h2>
+  <div class="profile-sections">
+    <article class="coding-journey">
+      <h3>About</h3>
+      <p>
+        I fell in love with coding when I built my first (terribly designed) website at 15, and I've been
+        happily obsessed ever since. These days, I craft web applications that help businesses grow,
+        using tools like React and Node.js. My Stanford CS degree gave me great fundamentals, but
+        real-world experience taught me how to solve actual human problems with technology.
+      </p>
+    </article>
 
-            <div class="profile-grid">
-                <article class="professional">
-                    <h3>My Coding Journey</h3>
-                    <p>I fell in love with coding when I built my first (terribly designed) website at 15, and I've been
-                        happily obsessed ever since. These days, I craft web applications that help businesses grow,
-                        using tools like React and Node.js. My Stanford CS degree gave me great fundamentals, but
-                        real-world experience taught me how to solve actual human problems with technology.</p>
-                </article>
+    <article class="coding-journey">
+      <h3>Student Photo</h3>
+      <div class="student-photo">
+  <img src="images/pci.jpg" alt="Photo of Muntu Titus" style="max-width: 100%; height: auto; border-radius: 10px;">
+</div>
 
-                <article class="philosophy">
-                    <h3>How I Work</h3>
-                    <p>I believe <strong>great code</strong> should be like a well-written story - clean, purposeful,
-                        and easy to follow. While I geek out over technical challenges, I never forget that we're
-                        building for real people. That's why I champion accessibility - because everyone deserves great
-                        digital experiences.</p>
-                </article>
+    </article>
+  </div>
+</section>
 
-                <article class="achievements">
-                    <h3>Proud Moments</h3>
-                    <ul>
-                        <li>Helped a company modernize their system (and made it 40% faster - high fives all around)
-                        </li>
-                        <li>Give back to the dev community through open source</li>
-                        <li>Got to share my Web Assembly excitement at JSConf (and didn't trip on stage)</li>
-                    </ul>
-                </article>
+<section class="certificate">
+  <h2>Web and Computer Programming Certificate</h2>
 
-                <article class="interests">
-                    <h3>When I'm Not Coding</h3>
-                    <p>You'll find me scaling rock walls (both real and virtual - I love climbing games!), experimenting
-                        with coffee beans in my kitchen, or writing about tech topics that excite me. I also mentor new
-                        developers because I remember how overwhelming those first lines of code can be.</p>
-                </article>
-            </div>
-
-            <div class="cta">
-                <p>I'm always up for chatting about tech, potential projects, or the perfect coffee roast</p>
-                <a href="#contact" class="button">Say hello →</a>
-            </div>
-        </section>
-
-        <section class="certificate">
-            <h2>Web and Computer Programming Certificate</h2>
-            <div class="filter-buttons">
-                <button id="all">All Courses</button>
-                <button id="wdd">WDD Courses</button>
-                <button id="cse">CSE Courses</button>
-            </div>
-            <div id="courses-container"></div>
-            <div id="credits-display">Total Credits: <span id="total-credits">0</span></div>
-        </section>
-
-        <section class="resources">
-            <h2>Learning Resources</h2>
-            <section class="learning-resources">
-                <div class="resource-cards">
-                    <div class="card">
-                        <h3>Book Heroes</h3>
-                        <ul>
-                            <li><strong>"Clean Code"</strong> - Fixed my spaghetti code habits</li>
-                            <li><strong>"You Don't Know JS"</strong> - Explained JavaScript's quirks</li>
-                        </ul>
-                    </div>
-
-                    <div class="card">
-                        <h3>Go-To Resources</h3>
-                        <ul>
-                            <li><a href="https://frontendmasters.com">Frontend Masters</a> - Deep-dive courses</li>
-                            <li><a href="https://css-tricks.com">CSS-Tricks</a> - Flexbox lifesaver</li>
-                        </ul>
-                    </div>
-
-                    <div class="card">
-                        <h3>Unexpected Teachers</h3>
-                        <ul>
-                            <li><strong>Debugging fails</strong> - Best lessons come from mistakes</li>
-                            <li><strong>Rubber ducking</strong> - My shower walls are great listeners</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="cta">
-                    <p>Got any favorite resources? I'd love to check them out!</p>
-                    <a href="#contact" class="button">Share with me</a>
-                </div>
-            </section>
-        </section>
+  <div class="course-buttons">
+    <div class="column">
+      <h4>All Courses</h4>
+      <button>All Courses</button>
+      <button>All Courses</button>
+    </div>
+    <div class="column">
+      <h4>WDD Courses</h4>
+      <button>WDD Courses</button>
+      <button>WDD Courses</button>
+    </div>
+    <div class="column">
+      <h4>CSE Courses</h4>
+      <button>CSE Courses</button>
+      <button>CSE Courses</button>
+    </div>
+  </div>
+</section>         
     </main>
 
     <footer>
         <div class="social-links">
-            <a href="https://github.com/yourusername" target="_blank"><img src="images/github.svg" alt="GitHub"></a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank"><img src="images/linkedin.svg"
+            <a href="https://github.com/yourusername" target="_blank"><img src="images/githublogo.png" alt="GitHub"></a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"><img src="images/linkedin.png"
                     alt="LinkedIn"></a>
-            <a href="https://x.com/yourusername" target="_blank"><img src="images/x.svg" alt="x"></a>
+            <a href="https://x.com/yourusername" target="_blank"><img src="images/X_logo.jpg" alt="x"></a>
             <!-- Add 1-2 more social links -->
         </div>
+        <div class="coding-journey">
         <p>&copy; <span id="currentyear"></span> | Muntu Titus | Kampala/Uganda</p>
         <p id="lastModified"></p>
+        </div>
     </footer>
 </body>
 

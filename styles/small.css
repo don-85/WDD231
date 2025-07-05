@@ -27,7 +27,7 @@ header {
     height: 50px;
     width: auto;
 }
-
+/* 
 #menu-button {
     background: none;
     border: none;
@@ -97,7 +97,7 @@ section {
 .course-card.completed {
     background-color: #yourColor;
     border-color: #yourColor;
-}
+} */
 
 footer {
     text-align: center;
@@ -142,9 +142,9 @@ footer {
 /* (All component styles that apply to mobile) */
 
 /* Mobile navigation */
-nav ul {
+/* nav ul {
   flex-direction: column;
-}
+} */
 
 /* Mobile course grid */
 .course-container {
