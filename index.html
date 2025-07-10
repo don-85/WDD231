@@ -28,11 +28,11 @@
     </header>
 
     <nav>
-        <ul id="primary-nav">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="#">Chamber Project</a></li>
-            <li><a href="#">Final Project</a></li>
-        </ul>
+        
+            <a  class="active" href="index.html">Home</a>
+            <a href="#">Chamber Project</a>
+            <a href="#">Final Project</a>
+       
     </nav>
 
     <main>
@@ -63,24 +63,38 @@
 <section class="certificate">
   <h2>Web and Computer Programming Certificate</h2>
 
+  <!-- Filter controls -->
+  <div class="filter-bar">
+    <button onclick="filterCourses('all')">All Courses</button>
+    <button onclick="filterCourses('wdd')">WDD Courses</button>
+    <button onclick="filterCourses('cse')">CSE Courses</button>
+  </div>
+  <div class="total">Total Credits: <span id="creditCount">0</span></div>
+
+  <!-- Course groups -->
   <div class="course-buttons">
-    <div class="column">
-      <h4>All Courses</h4>
-      <button>All Courses</button>
-      <button>All Courses</button>
-    </div>
-    <div class="column">
+    <div class="column course-group wdd">
       <h4>WDD Courses</h4>
-      <button>WDD Courses</button>
-      <button>WDD Courses</button>
+      <button data-credits="3">WDD 130 (3 cr)</button>
+      <button data-credits="3">WDD 131 (3 cr)</button>
+      <button data-credits="4">WDD 230 (4 cr)</button>
     </div>
-    <div class="column">
+
+    <div class="column course-group cse">
       <h4>CSE Courses</h4>
-      <button>CSE Courses</button>
-      <button>CSE Courses</button>
+      <button data-credits="2">CSE 110 (2 cr)</button>
+      <button data-credits="4">CSE 111 (4 cr)</button>
+      <button data-credits="3">CSE 210 (3 cr)</button>
+    </div>
+
+    <div class="column course-group other">
+      <h4>Other Courses</h4>
+      <button data-credits="1">HTML Basics (1 cr)</button>
+      <button data-credits="2">Comp Basics (2 cr)</button>
     </div>
   </div>
-</section>         
+</section>
+
     </main>
 
     <footer>
@@ -92,10 +106,60 @@
             <!-- Add 1-2 more social links -->
         </div>
         <div class="coding-journey">
-        <p>&copy; <span id="currentyear"></span> | Muntu Titus | Kampala/Uganda</p>
-        <p id="lastModified"></p>
-        </div>
+  <p>&copy; <span id="currentYear"></span> | Muntu Titus | Kampala, Uganda</p>
+  <p>Last modified: <span id="lastModified"></span></p>
+</div>
     </footer>
 </body>
+<script>
+  // Put the current year in the © line
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
 
+  // Show the file’s last-modified timestamp
+  const mod = new Date(document.lastModified);
+  // Format as e.g. 10 Jul 2025 19:04
+  const formatted = mod.toLocaleString('en-GB', {
+    day:    '2-digit',
+    month:  'short',
+    year:   'numeric',
+    hour:   '2-digit',
+    minute: '2-digit',
+  });
+  document.getElementById('lastModified').textContent = formatted;
+</script>
+<script>
+  function filterCourses(category) {
+    const allGroups = document.querySelectorAll('.course-group');
+    allGroups.forEach(group => {
+      group.classList.add('hidden');
+      if (category === 'all') {
+        group.classList.remove('hidden');
+      } else if (group.classList.contains(category)) {
+        group.classList.remove('hidden');
+      }
+    });
+  }
+</script>
+<script>
+  // initial load
+  updateCredits();
+
+  function filterCourses(category) {
+    const groups = document.querySelectorAll('.course-group');
+    groups.forEach(group => {
+      group.classList.toggle('hidden',
+        category !== 'all' && !group.classList.contains(category)
+      );
+    });
+    updateCredits();
+  }
+
+  function updateCredits() {
+    // Sum credits of all VISIBLE buttons
+    const visibleButtons = Array.from(document.querySelectorAll('.course-group:not(.hidden) button'));
+    const total = visibleButtons
+      .reduce((sum, btn) => sum + Number(btn.dataset.credits || 0), 0);
+    document.getElementById('creditCount').textContent = total;
+  }
+</script>
 </html>

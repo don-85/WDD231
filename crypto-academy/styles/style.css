@@ -1,0 +1,265 @@
+/* ------------------- */
+/* Custom Properties   */
+/* ------------------- */
+:root {
+    --primary-color: #0a192f;
+    --secondary-color: #172a45;
+    --accent-color: #64ffda;
+    --text-color: #ccd6f6;
+    --text-light: #8892b0;
+
+    --font-primary: 'Roboto', sans-serif;
+    --font-headings: 'Space Grotesk', sans-serif;
+}
+
+/* ------------------- */
+/* Reset & Globals     */
+/* ------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-headings);
+    color: var(--text-color);
+    line-height: 1.2;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ------------------- */
+/* Utility Classes     */
+/* ------------------- */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--accent-color);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+/* ------------------- */
+/* Header & Navigation */
+/* ------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: var(--font-headings);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* ------------------- */
+/* Main Content        */
+/* ------------------- */
+main {
+    padding: 2rem 5%;
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 70vh;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+/* Features & Courses Sections */
+.features,
+#courses,
+#testimonials {
+    padding: 4rem 0;
+}
+
+.features-grid,
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card,
+.course-card {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.feature-card:hover,
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card {
+    padding: 2rem;
+    text-align: center;
+}
+
+.feature-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.course-content {
+    padding: 1.5rem;
+}
+
+.course-link {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Testimonials */
+.testimonial-card {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--secondary-color);
+    padding: 2.5rem;
+    border-left: 4px solid var(--accent-color);
+    border-radius: 8px;
+}
+
+.testimonial-card blockquote {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links,
+    .navbar .cta-button {
+        display: none; /* Simple hide for mobile, JS needed for a hamburger menu */
+    }
+}
+.certificate {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .course-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .column {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    min-width: 180px;
+  }
+
+  .column button {
+    display: block;
+    margin: 8px auto;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .hidden {
+    display: none;
+  }
+    .certificate          { text-align:center; padding:1.5rem; font-family:system-ui, sans-serif; }
+  .filter-bar           { margin-bottom:1.5rem; display:flex; gap:.5rem; justify-content:center; flex-wrap:wrap; }
+  .filter-bar button    { padding:.5rem 1rem; border:none; border-radius:6px; background:#6366f1; color:#fff; cursor:pointer; }
+  .filter-bar button:hover { background:#4f46e5; }
+  .total                { font-weight:600; margin-top:.75rem; }
+  .course-buttons       { display:flex; gap:2rem; justify-content:center; flex-wrap:wrap; }
+  .column               { border:1px solid #ddd; border-radius:10px; padding:1rem 1.25rem; min-width:180px; }
+  .column h4            { margin-top:0; color:#4f46e5; }
+  .column button        { display:block; width:100%; margin:.4rem 0; padding:.5rem; border:1px solid #4f46e5; background:#f8fafc; border-radius:6px; cursor:pointer; }
+  .hidden  
