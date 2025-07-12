@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kampala Chamber of Commerce | Home</title>
+
+  <!-- external styles -->
+  <link rel="stylesheet" href="styles/chembar.css" />
+
+  <!-- inline JavaScript (dark-mode toggle) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.querySelector("#theme-toggle");
+      toggle.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+        toggle.classList.toggle("spin");
+      });
+    });
+  </script>
+</head>
+<body>
+  <!-- ───── Header/nav bar ───── -->
+  <header class="topbar">
+    <div class="container">
+      <div class="brand">
+        <img src="images/logo.jpg" alt="Kampala Chamber logo" />
+        <span>Kampala Chamber of Commerce</span>
+      </div>
+
+      <nav class="site-nav">
+  <!-- hamburger -->
+  <button id="nav-toggle"
+          class="hamburger"
+          aria-label="Toggle navigation"
+          aria-expanded="false">
+    ☰
+  </button>
+
+  <!-- links -->
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="#">Directory</a></li>
+    <li><a href="#">Join</a></li>
+    <li><a href="#">Discover</a></li>
+  </ul>
+</nav>
+
+      <!-- <button id="theme-toggle" aria-label="Toggle dark mode">⦿</button>
+    </div> -->
+  </header>
+
+  <!-- ───── Hero section ───── -->
+  <section class="hero">
+    <picture>
+      <source srcset="hero-small.jpg" media="(max-width: 640px)" />
+      <img src="images/office.jpg" alt="Scalable, responsive hero image" />
+    </picture>
+    <a href="#" class="cta-btn">Keynote Tickets</a>
+  </section>
+
+  <!-- ───── Main content ───── -->
+  <main class="container">
+    <h1>Home</h1>
+
+    <!-- dashboard row -->
+    <!-- ────── INFO-GRID (events + live Kampala weather) ────── -->
+<section class="info-grid">
+
+  <!-- 1 ▸ Events panel -->
+  <article class="panel events">
+    <h2>Events</h2>
+    <!-- placeholder content -->
+  </article>
+
+  <!-- 2 ▸ Current weather (auto-filled) -->
+  <article class="panel weather" id="weather-current">
+    <h2>Current Weather (Kampala)</h2>
+    <div class="temp" id="temp-now">-- °C</div>
+    <img id="weather-icon" src="images/cloud.png" alt="Weather icon" />
+    <ul id="current-details">
+      <li>Loading …</li>
+    </ul>
+  </article>
+
+  <!-- 3 ▸ Three-day forecast (auto-filled) -->
+  <article class="panel forecast">
+    <h2>3-Day Forecast</h2>
+    <ul id="forecast-list">
+      <li>Loading …</li>
+    </ul>
+  </article>
+
+</section>
+
+
+
+    <!-- business cards -->
+    <section class="cards">
+  <!-- 1 ▸ Matoke Bistro -->
+  <article class="card">
+    <h3>Matoke Bistro</h3>
+    <p class="tagline">Modern Ugandan Cuisine</p>
+    <img src="images/bistrologo.jpeg" alt="Matoke Bistro logo" />
+    <ul>
+      <li><strong>Email:</strong> info@matokebistro.ug</li>
+      <li><strong>Phone:</strong> +256 709 123456</li>
+      <li><strong>URL:</strong> www.matokebistro.ug</li>
+    </ul>
+  </article>
+
+  <!-- 2 ▸ Trust & Grow Accounting -->
+  <article class="card">
+    <h3>Trust & Grow Accounting</h3>
+    <p class="tagline">Smart Financial Solutions</p>
+    <img src="images/trustlogo.webp" alt="Trust & Grow logo" />
+    <ul>
+      <li><strong>Email:</strong> support@trustgrow.co.ug</li>
+      <li><strong>Phone:</strong> +256 750 001122</li>
+      <li><strong>URL:</strong> trustgrow.co.ug</li>
+    </ul>
+  </article>
+
+  <!-- 3 ▸ Bugolobi Coffee Roasters -->
+  <article class="card">
+    <h3>Bugolobi Coffee Roasters</h3>
+    <p class="tagline">Freshly Roasted Ugandan Coffee</p>
+    <img src="images/bugolobilogo.png" alt="Bugolobi Coffee logo" />
+    <ul>
+      <li><strong>Email:</strong> hello@bugolobicoffee.com</li>
+      <li><strong>Phone:</strong> +256 787 654321</li>
+      <li><strong>URL:</strong> bugolobicoffee.com</li>
+    </ul>
+  </article>
+</section>
+
+  </main>
+
+  <!-- ───── Footer ───── -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <!-- left column -->
+      <address class="contact">
+        <strong>Kampala Chamber of Commerce</strong><br />
+        10 Rue de La Paix<br />
+        Kampala, Mali 999<br />
+        <a href="mailto:info@Kampalascc.org">info@Kampalascc.org</a><br />
+        (223) 555-2300
+      </address>
+
+      <!-- middle column -->
+      <div class="social">
+        <a href="#" aria-label="YouTube">
+          <img src="images/githublogo.png" alt="" />
+        </a>
+        <a href="#" aria-label="Twitter">
+          <img src="images/X_logo.jpg" alt="" />
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <img src="images/linkedin.png" alt="" />
+        </a>
+      </div>
+
+      <!-- right column -->
+      <div class="meta">
+        WDD 231 Class Project<br />
+        Titus Muntu<br />
+        © 2025 Kampala Chamber of Commerce<br />
+        Last Modification: <span id="last-mod"></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- last-modified script -->
+  <script>
+    document.getElementById("last-mod").textContent =
+      document.lastModified.split(" ").slice(0, 2).join(" ");
+  </script>
+</body>
+<!-- ────── KAMPALA WEATHER SCRIPT (async/await, no API key) ────── -->
+<script>
+(async function loadKampalaWeather() {
+  const lat = 0.3476, lon = 32.5825;                         // Kampala
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}` +
+              `&current=temperature_2m,weather_code,relative_humidity_2m` +
+              `&daily=temperature_2m_max,temperature_2m_min,weather_code,sunrise,sunset` +
+              `&timezone=Africa%2FKampala`;
+
+  /* weather-code ➜ text */
+  const WMO = {
+    0:"Clear",1:"Mainly clear",2:"Partly cloudy",3:"Overcast",
+    45:"Fog",48:"Rime fog",51:"Light drizzle",53:"Drizzle",55:"Heavy drizzle",
+    61:"Light rain",63:"Rain",65:"Heavy rain",71:"Light snow",
+    80:"Rain showers",95:"Thunderstorm"
+  };
+
+  /* weather-code ➜ simple PNG icon (free set) */
+  const iconSrc = code =>
+    `https://raw.githubusercontent.com/visualcrossing/WeatherIcons/main/PNG/${code}.png`;
+
+  try {
+    const res  = await fetch(url);
+    if (!res.ok) throw new Error("Weather request failed");
+    const data = await res.json();
+
+    /* ----- current conditions ----- */
+    const cur  = data.current;
+    const day  = data.daily;
+
+    document.getElementById("temp-now").textContent =
+      `${Math.round(cur.temperature_2m)} °C`;
+
+    const img = document.getElementById("weather-icon");
+    img.src = iconSrc(cur.weather_code);
+    img.alt = WMO[cur.weather_code] || "Weather icon";
+    
+
+    document.getElementById("current-details").innerHTML = `
+      <li>${WMO[cur.weather_code] || "—"}</li>
+      <li>High: ${Math.round(day.temperature_2m_max[0])} °C</li>
+      <li>Low:  ${Math.round(day.temperature_2m_min[0])} °C</li>
+      <li>Humidity: ${cur.relative_humidity_2m}%</li>
+      <li>Sunrise: ${day.sunrise[0].split("T")[1].slice(0,5)}</li>
+      <li>Sunset:  ${day.sunset[0].split("T")[1].slice(0,5)}</li>
+    `;
+
+    /* ----- 3-day forecast ----- */
+    const names = ["Today","Tomorrow",
+      new Date(day.time[2]).toLocaleDateString("en-US",{weekday:"short"})];
+
+    const fcHTML = [0,1,2].map(i =>
+      `<li>${names[i]}: <strong>${Math.round(
+        day.temperature_2m_max[i])} °C</strong></li>`).join("");
+
+    document.getElementById("forecast-list").innerHTML = fcHTML;
+
+  } catch (err) {
+    console.error(err);
+    document.getElementById("weather-current").innerHTML =
+      "<p>Weather data unavailable.</p>";
+  }
+})();
+</script>
+<script>
+    const url =
+  `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}` +
+  `&current=temperature_2m,weather_code,relative_humidity_2m` +   // ← keep weather_code here
+  `&daily=temperature_2m_max,temperature_2m_min,weather_code,sunrise,sunset` +
+  `&timezone=Africa%2FKampala`;
+if (cur.weather_code !== undefined) {
+  img.src = iconSrc(cur.weather_code);
+  img.alt = WMO[cur.weather_code] || "Weather icon";
+} else {
+  img.src = "icons/default.png";
+  img.alt = "Weather icon not available";
+}
+
+</script>
+<script>
+/* ─── mobile nav toggle ─── */
+document.getElementById("nav-toggle").addEventListener("click", () => {
+  const menu = document.getElementById("nav-links");
+  const btn  = document.getElementById("nav-toggle");
+
+  menu.classList.toggle("open");
+  const expanded = menu.classList.contains("open");
+  btn.setAttribute("aria-expanded", expanded);
+});
+</script>
+
+</html>
