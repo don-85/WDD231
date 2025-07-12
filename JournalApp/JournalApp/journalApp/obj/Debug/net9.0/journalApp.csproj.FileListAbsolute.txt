@@ -1,0 +1,15 @@
+C:\Users\HP\OneDrive\Desktop\wdd231\JournalApp\JournalApp\journalApp\bin\Debug\net9.0\journalApp.exe
+C:\Users\HP\OneDrive\Desktop\wdd231\JournalApp\JournalApp\journalApp\bin\Debug\net9.0\journalApp.deps.json
+C:\Users\HP\OneDrive\Desktop\wdd231\JournalApp\JournalApp\journalApp\bin\Debug\net9.0\journalApp.runtimeconfig.json
+C:\Users\HP\OneDrive\Desktop\wdd231\JournalApp\JournalApp\journalApp\bin\Debug\net9.0\journalApp.dll
+C:\Users\HP\OneDrive\Desktop\wdd231\JournalApp\JournalApp\journalApp\bin\Debug\net9.0\journalApp.pdb
+C:\Users\HP\OneDrive\Desktop\wdd231\JournalApp\JournalApp\journalApp\obj\Debug\net9.0\journalApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\OneDrive\Desktop\wdd231\JournalApp\JournalApp\journalApp\obj\Debug\net9.0\journalApp.AssemblyInfoInputs.cache
+C:\Users\HP\OneDrive\Desktop\wdd231\JournalApp\JournalApp\journalApp\obj\Debug\net9.0\journalApp.AssemblyInfo.cs
+C:\Users\HP\OneDrive\Desktop\wdd231\JournalApp\JournalApp\journalApp\obj\Debug\net9.0\journalApp.csproj.CoreCompileInputs.cache
+C:\Users\HP\OneDrive\Desktop\wdd231\JournalApp\JournalApp\journalApp\obj\Debug\net9.0\journalApp.sourcelink.json
+C:\Users\HP\OneDrive\Desktop\wdd231\JournalApp\JournalApp\journalApp\obj\Debug\net9.0\journalApp.dll
+C:\Users\HP\OneDrive\Desktop\wdd231\JournalApp\JournalApp\journalApp\obj\Debug\net9.0\refint\journalApp.dll
+C:\Users\HP\OneDrive\Desktop\wdd231\JournalApp\JournalApp\journalApp\obj\Debug\net9.0\journalApp.pdb
+C:\Users\HP\OneDrive\Desktop\wdd231\JournalApp\JournalApp\journalApp\obj\Debug\net9.0\journalApp.genruntimeconfig.cache
+C:\Users\HP\OneDrive\Desktop\wdd231\JournalApp\JournalApp\journalApp\obj\Debug\net9.0\ref\journalApp.dll

@@ -1,0 +1,4 @@
+dotnet new console -o JournalApp
+cd JournalApp
+# replace generated Program.cs with the single-file version above
+dotnet run

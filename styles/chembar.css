@@ -304,5 +304,11 @@ button#theme-toggle {
   }
   .nav-links.open { display: flex; }
 }
+#weather-icon {
+  width: 48px;
+  height: auto;
+  vertical-align: middle;
+  margin: 0.5rem 0;
+}
 
 
