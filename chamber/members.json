@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Sunrise Café",
+    "address": "123 Main St, YourCity",
+    "phone": "555-0123",
+    "website": "https://sunrisecafe.example",
+    "image": "sunrise-cafe.jpg",
+    "membership": 3,
+    "tagline": "Fresh coffee & pastries"
+  },
+  {
+    "name": "Bright Tech Solutions",
+    "address": "456 Innovation Blvd, YourCity",
+    "phone": "555-0456",
+    "website": "https://brighttech.example",
+    "image": "bright-tech.png",
+    "membership": 2,
+    "tagline": "IT services & consulting"
+  },
+  {
+    "name": "Riverside Hotel",
+    "address": "789 River Rd, YourCity",
+    "phone": "555-0789",
+    "website": "https://riversidehotel.example",
+    "image": "riverside-hotel.jpg",
+    "membership": 3,
+    "tagline": "Comfort on the waterfront"
+  },
+  {
+    "name": "Green Thumb Nursery",
+    "address": "135 Garden Ln, YourCity",
+    "phone": "555-0135",
+    "website": "https://greenthumb.example",
+    "image": "green-thumb.jpg",
+    "membership": 1,
+    "tagline": "Plants, trees & landscaping"
+  },
+  {
+    "name": "Peak Fitness Gym",
+    "address": "246 Strength Ave, YourCity",
+    "phone": "555-0246",
+    "website": "https://peakfitness.example",
+    "image": "peak-fitness.jpg",
+    "membership": 2,
+    "tagline": "24/7 health & wellness"
+  },
+  {
+    "name": "Metro Insurance Group",
+    "address": "357 Safe St, YourCity",
+    "phone": "555-0357",
+    "website": "https://metroinsurance.example",
+    "image": "metro-insurance.png",
+    "membership": 1,
+    "tagline": "Coverage you can trust"
+  },
+  {
+    "name": "Heritage Bookstore",
+    "address": "468 Story Way, YourCity",
+    "phone": "555-0468",
+    "website": "https://heritagebooks.example",
+    "image": "heritage-bookstore.jpg",
+    "membership": 2,
+    "tagline": "New & used books"
+  }
+]

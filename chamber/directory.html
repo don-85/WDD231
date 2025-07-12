@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chamber Directory - [Your City]</title>
+  <meta name="description" content="Business Directory of the [Your City] Chamber of Commerce">
+  <meta name="author" content="Your Name">
+
+  <!-- Facebook Open Graph -->
+  <meta property="og:title" content="Chamber Directory - [Your City]">
+  <meta property="og:description" content="Explore businesses in [Your City]">
+  <meta property="og:image" content="https://yourdomain.com/chamber/images/social-preview.jpg">
+  <meta property="og:url" content="https://yourdomain.com/chamber/directory.html">
+
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/directory.js"></script>
+</head>
+<body>
+  <header>
+    <h1>[Your City] Chamber of Commerce</h1>
+    <nav>
+      <button id="menu-button">☰</button>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <!-- Add other nav items -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Business Directory</h2>
+    <div class="view-toggle">
+      <button id="grid-view">Grid View</button>
+      <button id="list-view">List View</button>
+    </div>
+    <div id="members" class="grid"></div>
+  </main>
+
+  <footer>
+    <p>Contact: info@yourcitychamber.org</p>
+    <p>&copy; <span id="year"></span> | Your Name | WDD 231 | Last Updated: <span id="last-modified"></span></p>
+  </footer>
+</body>
+</html>

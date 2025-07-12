@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\OneDrive\\Desktop\\wdd231\\JournalApp\\JournalApp\\JournalApp\\journalApp.csproj": {}
+    "C:\\Users\\HP\\OneDrive\\Desktop\\wdd231\\JournalApp\\JournalApp\\journalApp\\journalApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\OneDrive\\Desktop\\wdd231\\JournalApp\\JournalApp\\JournalApp\\journalApp.csproj": {
+    "C:\\Users\\HP\\OneDrive\\Desktop\\wdd231\\JournalApp\\JournalApp\\journalApp\\journalApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\OneDrive\\Desktop\\wdd231\\JournalApp\\JournalApp\\JournalApp\\journalApp.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\OneDrive\\Desktop\\wdd231\\JournalApp\\JournalApp\\journalApp\\journalApp.csproj",
         "projectName": "journalApp",
-        "projectPath": "C:\\Users\\HP\\OneDrive\\Desktop\\wdd231\\JournalApp\\JournalApp\\JournalApp\\journalApp.csproj",
+        "projectPath": "C:\\Users\\HP\\OneDrive\\Desktop\\wdd231\\JournalApp\\JournalApp\\journalApp\\journalApp.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\OneDrive\\Desktop\\wdd231\\JournalApp\\JournalApp\\JournalApp\\obj\\",
+        "outputPath": "C:\\Users\\HP\\OneDrive\\Desktop\\wdd231\\JournalApp\\JournalApp\\journalApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config"
