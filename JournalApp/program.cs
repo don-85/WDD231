@@ -1,19 +1,5 @@
 using System;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
 
-var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
-
-
-// ⬇️ Your endpoint goes here
-app.MapGet("/grade", (int gradePercentage) =>
-{
-    return Results.Ok($"You scored {gradePercentage}%");
-});
-
-// ⬆️ All endpoints should be added before this line
-app.Run();
 namespace JournalApp
 {
     internal class Program
