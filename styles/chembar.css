@@ -1,0 +1,308 @@
+/* ─── CSS Reset (minimal) ─── */
+*,
+*::before,
+*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --clr-primary: #15263e;
+  --clr-accent:  #0084ff;
+  --clr-gray-100: #f7f7f7;
+  --clr-gray-800: #333;
+  --transition: .3s ease-in-out;
+  font-family: system-ui, sans-serif;
+}
+
+/* Dark theme overrides */
+.dark {
+  --clr-primary: #eaeff6;
+  --clr-gray-100: #1d1f24;
+  --clr-gray-800: #eee;
+  background: #0e0f12;
+  color: var(--clr-primary);
+}
+
+body {
+  background: var(--clr-gray-100);
+  color: var(--clr-gray-800);
+  line-height: 1.5;
+}
+
+/* ─── Top bar ─── */
+.topbar {
+  background: var(--clr-primary);
+  color: #fff;
+}
+
+.topbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.brand img { width: 28px; }
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  font-weight: 700;
+}
+
+#theme-toggle {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  line-height: 22px;
+  cursor: pointer;
+  transition: transform var(--transition);
+}
+
+#theme-toggle.spin { transform: rotate(180deg); }
+
+/* ─── Hero ─── */
+.hero {
+  position: relative;
+  max-width: 1200px;
+  margin: 1.25rem auto;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: .25rem;
+}
+
+.cta-btn {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: var(--clr-accent);
+  color: #fff;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: .9rem;
+  transition: opacity var(--transition);
+}
+.cta-btn:hover { opacity: .8; }
+
+/* ─── Main container ─── */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+
+/* Info grid (events/weather/forecast) */
+.info-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-bottom: 2rem;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: .25rem;
+  overflow: hidden;
+}
+.dark .panel { background: #1f232b; border-color: #333; }
+
+.panel h2 {
+  background: var(--clr-primary);
+  color: #fff;
+  font-size: 1rem;
+  padding: .5rem .75rem;
+}
+
+.panel ul { list-style: none; padding: .75rem; font-size: .875rem; }
+.temp { font-size: 1.75rem; font-weight: 700; padding: .5rem 0 .25rem .75rem; }
+
+/* ─── Business cards ─── */
+.cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-bottom: 3rem;
+}
+
+.card {
+  text-align: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: .25rem;
+  padding-bottom: 1rem;
+}
+.dark .card { background: #1f232b; border-color: #333; }
+
+.card h3 { margin-top: .75rem; font-size: 1.05rem; }
+.card .tagline { font-size: .8rem; color: var(--clr-accent); }
+
+.card img {
+  width: 64px;
+  height: 64px;
+  margin: .75rem auto;
+  object-fit: cover;
+}
+
+.card ul {
+  list-style: none;
+  font-size: .8rem;
+  line-height: 1.4;
+  padding: 0 .75rem;
+}
+
+/* ─── Responsive tweaks ─── */
+@media (min-width: 768px) {
+  .brand span { font-size: 1.125rem; }
+  .cta-btn { font-size: 1rem; }
+}
+
+/* ─── Footer ─── */
+.site-footer {
+  background: #d7d8dc;
+  color: #000;
+  padding: 1.25rem 0;
+  font-size: 0.8125rem;
+}
+
+.footer-grid {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.site-footer a { color: inherit; text-decoration: none; }
+
+.contact a:hover { text-decoration: underline; }
+
+/* social icons */
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+}
+.social img {
+  width: 36px;
+  height: 36px;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+.social img:hover { filter: grayscale(0%); }
+
+/* right-hand meta text */
+.meta { text-align: right; }
+
+@media (max-width: 640px) {
+  .meta { text-align: left; }
+}
+/* Example: Ensure good contrast for nav links */
+.nav-links a {
+  color: #ffffff; /* white text */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* On hover, add underline or bolder contrast */
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffd700; /* yellow or gold on dark bg */
+  text-decoration: underline;
+}
+
+/* Footer contrast fixes */
+.site-footer {
+  background-color: #15263e;
+  color: #f1f1f1;
+}
+
+.site-footer a {
+  color: #ffd700; /* Gold or bright yellow */
+}
+
+/* Dark mode improvements */
+.dark {
+  background-color: #121212;
+  color: #e5e5e5;
+}
+
+button#theme-toggle {
+  color: #fff;
+  border-color: #fff;
+}
+#weather-icon { width:64px;height:64px }
+#weather-icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-top: 0.5rem;
+}
+/* ─── navigation ─── */
+.site-nav {
+  position: relative;
+}
+
+/* hamburger button */
+.hamburger {
+  background: none;
+  border: 0;
+  font-size: 1.75rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;            /* hidden on wide screens */
+}
+
+/* default desktop layout */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* ---------- mobile ---------- */
+@media (max-width: 640px) {
+  .hamburger { display: block; }
+
+  .nav-links {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: var(--clr-primary, #15263e);
+    flex-direction: column;
+    width: 180px;
+    padding: 0.75rem 1rem;
+    gap: 1rem;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+    display: none;          /* closed by default */
+  }
+  .nav-links.open { display: flex; }
+}
+
+
