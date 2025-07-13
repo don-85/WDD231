@@ -60,3 +60,10 @@ nav a {
   max-height: 150px;
   object-fit: contain;
 }
+
+.event-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}

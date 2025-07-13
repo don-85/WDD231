@@ -311,4 +311,11 @@ button#theme-toggle {
   margin: 0.5rem 0;
 }
 
+.event-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 
