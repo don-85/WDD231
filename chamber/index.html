@@ -1,165 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Course home page for WDD231 - Web Frontend Development">
-    <meta name="author" content="Muntu Titus">
-    <title>WDD231 - Web Frontend Development</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Your+Selected+Font&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 768px)">
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/dates.js" defer></script>
-    <script src="scripts/courses.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kampala Chamber of Commerce | Home</title>
+
+  <!-- external styles -->
+  <link rel="stylesheet" href="styles/chembar.css" />
+
+  <!-- inline JavaScript (dark-mode toggle) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.querySelector("#theme-toggle");
+      toggle.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+        toggle.classList.toggle("spin");
+      });
+    });
+  </script>
 </head>
-
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="images/logo.jpg" alt="Course Logo">
-            <span>Muntu Titus</span>
-        </div>
-        <!-- <button id="menu-button" aria-label="Toggle Navigation">☰</button> -->
-    </header>
+  <!-- ───── Header/nav bar ───── -->
+  <header class="topbar">
+    <div class="container">
+      <div class="brand">
+        <img src="images/logo.jpg" alt="Kampala Chamber logo" />
+        <span>Kampala Chamber of Commerce</span>
+      </div>
 
-    <nav>
-        
-            <a  class="active" href="index.html">Home</a>
-            <a href="directory.html">Directory Project</a>
-            <a href="#">Final Project</a>
-       
-    </nav>
+      <nav class="site-nav">
+  <!-- hamburger -->
+  <button id="nav-toggle"
+          class="hamburger"
+          aria-label="Toggle navigation"
+          aria-expanded="false">
+    ☰
+  </button>
+
+  <!-- links -->
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="directory.html">Directory</a></li>
+    <li><a href="#">Join</a></li>
+    <li><a href="#">Discover</a></li>
+  </ul>
+</nav>
+
+      <!-- <button id="theme-toggle" aria-label="Toggle dark mode">⦿</button>
+    </div> -->
+  </header>
 
     <main>
-        <h1>Home</h1>
-<section class="about-me" aria-labelledby="about-heading">
+  <!-- Section 1: Hero with Text -->
+  <section class="hero-section" style="background: url('images/business.jpg') center/cover no-repeat;" >
+    <div class="in-text">
+      <h1 >
+        Welcome to the Kampala Chamber of Commerce – your bridge to business growth, innovation, and sustainable enterprise in Uganda.
+      </h1>
+    </div>
+  </section>
 
-  <div class="profile-sections">
-    <article class="coding-journey">
-      <h3>About</h3>
-      <p>
-        I fell in love with coding when I built my first (terribly designed) website at 15, and I've been
-        happily obsessed ever since. These days, I craft web applications that help businesses grow,
-        using tools like React and Node.js. My Byupathway CS certificate gave me great fundamentals, but
-        real-world experience taught me how to solve actual human problems with technology.
-      </p>
-    </article>
+  <!-- Section 2: Image Showcase -->
+  <section class="image-gallery">
+    <h2>What We Do</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+      <div>
+        <img src="images/connect.jpg" alt="Business Networking"/>
+        <p>Business Networking Events</p>
+      </div>
+      <div>
+        <img src="images/setup.jpg" alt="Workshops"/>
+        <p>Workshops & Capacity Building</p>
+      </div>
+      <div>
+        <img src="images/build.jpg" alt="Support"/>
+        <p>Startup & SME Support</p>
+      </div>
+    </div>
+  </section>
 
-    <article class="coding-journey">
-      <h3>Student Photo</h3>
-      <div class="student-photo">
-  <img src="images/pci.jpg" alt="Photo of Muntu Titus" style="max-width: 100%; height: auto; border-radius: 10px;">
+  <!-- Section 3: Brochures and Books -->
+  <section class="brochures-section">
+    <h2>Learn More</h2>
+    <p><b>We provide a wide range of business brochures, annual reports, and handbooks to empower our members.</b></p>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+  <img src="images/bronc1.jpg" alt="Brochure"/>
+  <img src="images/bronc2.jpg" alt="Book"/>
+  <img src="images/bronc3.jpg" alt="Report"/>
 </div>
 
-    </article>
-  </div>
-</section>
+  </section>
 
-<section class="certificate">
-  <h2>Web and Computer Programming Certificate</h2>
+  <!-- Section 4: YouTube Videos -->
+  <section class="video-section">
+    <h2>What is a Chamber of Commerce?</h2>
+    <div class="video">
+  <iframe width="360" height="215" 
+    src="https://www.youtube.com/embed/kSi3MbJP6Rs" 
+    title="What is a Chamber of Commerce?" 
+    frameborder="0" allowfullscreen></iframe>
 
-  <!-- Filter controls -->
-  <div class="filter-bar">
-    <button onclick="filterCourses('all')">All Courses</button>
-    <button onclick="filterCourses('wdd')">WDD Courses</button>
-    <button onclick="filterCourses('cse')">CSE Courses</button>
-  </div>
-  <div class="total">Total Credits: <span id="creditCount">0</span></div>
-
-  <!-- Course groups -->
-  <div class="course-buttons">
-    <div class="column course-group wdd">
-      <h4>WDD Courses</h4>
-      <button data-credits="3">WDD 130 (3 cr)</button>
-      <button data-credits="3">WDD 131 (3 cr)</button>
-      <button data-credits="4">WDD 230 (4 cr)</button>
-    </div>
-
-    <div class="column course-group cse">
-      <h4>CSE Courses</h4>
-      <button data-credits="2">CSE 110 (2 cr)</button>
-      <button data-credits="4">CSE 111 (4 cr)</button>
-      <button data-credits="3">CSE 210 (3 cr)</button>
-    </div>
-
-    <div class="column course-group other">
-      <h4>Other Courses</h4>
-      <button data-credits="1">HTML Basics (1 cr)</button>
-      <button data-credits="2">Comp Basics (2 cr)</button>
-    </div>
-  </div>
-</section>
-
-    </main>
-
-    <footer>
-        <div class="social-links">
-            <a href="https://github.com/yourusername" target="_blank"><img src="images/githublogo.png" alt="GitHub"></a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank"><img src="images/linkedin.png"
-                    alt="LinkedIn"></a>
-            <a href="https://x.com/yourusername" target="_blank"><img src="images/X_logo.jpg" alt="x"></a>
-            <!-- Add 1-2 more social links -->
-        </div>
-        <div class="coding-journey">
-  <p>&copy; <span id="currentYear"></span> | Muntu Titus | Kampala, Uganda</p>
-  <p>Last modified: <span id="lastModified"></span></p>
+  <iframe width="360" height="215" 
+    src="https://www.youtube.com/embed/AMc7mm_vkJE" 
+    title="Benefits of Joining a Chamber" 
+    frameborder="0" allowfullscreen></iframe>
 </div>
-    </footer>
-</body>
-<script>
-  // Put the current year in the © line
-  document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </section>
 
-  // Show the file’s last-modified timestamp
-  const mod = new Date(document.lastModified);
-  // Format as e.g. 10 Jul 2025 19:04
-  const formatted = mod.toLocaleString('en-GB', {
-    day:    '2-digit',
-    month:  'short',
-    year:   'numeric',
-    hour:   '2-digit',
-    minute: '2-digit',
-  });
-  document.getElementById('lastModified').textContent = formatted;
-</script>
-<script>
-  function filterCourses(category) {
-    const allGroups = document.querySelectorAll('.course-group');
-    allGroups.forEach(group => {
-      group.classList.add('hidden');
-      if (category === 'all') {
-        group.classList.remove('hidden');
-      } else if (group.classList.contains(category)) {
-        group.classList.remove('hidden');
-      }
-    });
-  }
-</script>
-<script>
-  // initial load
-  updateCredits();
+  <!-- Section 5: Moving Adverts -->
+  <section class="ads-section">
+    <h2 style="text-align: center;">Featured Business Ads</h2>
+    <div id="ad-marquee" style="white-space: nowrap; display: inline-block;">
+      <span style="display: inline-block; margin-right: 3rem;">🌟 Matoke Bistro – Modern Ugandan Cuisine</span>
+      <span style="display: inline-block; margin-right: 3rem;">🛠️ Trust & Build Ltd – Construction Experts</span>
+      <span style="display: inline-block; margin-right: 3rem;">📱 TechSavvy – IT Solutions & Consulting</span>
+      <span style="display: inline-block; margin-right: 3rem;">🏦 Equity Alliance – Financial Services</span>
+    </div>
+  </section>
 
-  function filterCourses(category) {
-    const groups = document.querySelectorAll('.course-group');
-    groups.forEach(group => {
-      group.classList.toggle('hidden',
-        category !== 'all' && !group.classList.contains(category)
-      );
-    });
-    updateCredits();
-  }
+  <script>
+    // Scroll ads continuously
+    const adMarquee = document.getElementById('ad-marquee');
+    let offset = 0;
+    function scrollAds() {
+      offset -= 1;
+      if (Math.abs(offset) >= adMarquee.scrollWidth / 2) offset = 0;
+      adMarquee.style.transform = `translateX(${offset}px)`;
+      requestAnimationFrame(scrollAds);
+    }
+    scrollAds();
+  </script>
+</main>
 
-  function updateCredits() {
-    // Sum credits of all VISIBLE buttons
-    const visibleButtons = Array.from(document.querySelectorAll('.course-group:not(.hidden) button'));
-    const total = visibleButtons
-      .reduce((sum, btn) => sum + Number(btn.dataset.credits || 0), 0);
-    document.getElementById('creditCount').textContent = total;
-  }
-</script>
+
+ 
+
+  <!-- ───── Footer ───── -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <!-- left column -->
+      <address class="contact">
+        <strong>Kampala Chamber of Commerce</strong><br />
+        10 Rue de La Paix<br />
+        Kampala, Mali 999<br />
+        <a href="mailto:info@Kampalascc.org">info@Kampalascc.org</a><br />
+        (223) 555-2300
+      </address>
+
+      <!-- middle column -->
+      <div class="social">
+        <a href="#" aria-label="YouTube">
+          <img src="images/githublogo.png" alt="" />
+        </a>
+        <a href="#" aria-label="Twitter">
+          <img src="images/X_logo.jpg" alt="" />
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <img src="images/linkedin.png" alt="" />
+        </a>
+      </div>
+
+      <!-- right column -->
+      <div class="meta">
+        WDD 231 Class Project<br />
+        Titus Muntu<br />
+        © 2025 Kampala Chamber of Commerce<br />
+        Last Modification: <span id="last-mod"></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- last-modified script -->
+  
+
 </html>

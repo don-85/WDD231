@@ -310,5 +310,212 @@ button#theme-toggle {
   vertical-align: middle;
   margin: 0.5rem 0;
 }
+/* ---------- General Styles ---------- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
 
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
 
+/* ---------- Header ---------- */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #014378;
+  padding: 1rem;
+  color: white;
+}
+
+.topbar .brand {
+  display: flex;
+  align-items: center;
+}
+
+.topbar .brand img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.topbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.topbar nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.topbar nav ul li a.active,
+.topbar nav ul li a:hover {
+  border-bottom: 2px solid white;
+}
+
+/* ---------- Hero Section ---------- */
+.hero-section h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+/* ---------- Image Gallery ---------- */
+.image-gallery h2,
+.brochures-section h2,
+.video-section h2,
+.ads-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.image-gallery div,
+.brochures-section div,
+.video-section div {
+  gap: 1.5rem;
+}
+
+.image-gallery p {
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+/* ---------- Brochures Section ---------- */
+.brochures-section img {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.brochures-section img:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- Video Section ---------- */
+.video-section iframe {
+  border-radius: 8px;
+}
+
+/* ---------- Ads Section ---------- */
+.ads-section {
+  position: relative;
+  overflow: hidden;
+  background-color: #f0f8ff;
+  padding: 1rem 0;
+}
+
+#ad-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #014378;
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background-color: #014378;
+  color: white;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer-grid .contact,
+.footer-grid .social,
+.footer-grid .meta {
+  flex: 1 1 200px;
+}
+
+.footer-grid img {
+  width: 30px;
+  margin-right: 10px;
+}
+.image-gallery img{
+  width: 100%;
+   max-width: 400px;
+   height: 375px;
+   padding: 2rem;
+   text-align: center;
+  
+}
+.image-gallery{
+  padding: 2rem;
+   text-align: center;
+}
+.hero-section{
+  position: relative;
+  height: 60vh;
+  background-image: url('images/business.jpg') center/cover no-repeat;
+}
+.hero-section h1{
+  color: white;
+   font-size: 2rem; 
+   max-width: 90%; 
+   padding: 1rem;
+   background: url('images/business.jpg') center/cover no-repeat;
+}
+.in-text{
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  background-color: rgba(0,0,0,0.5); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  text-align: center;
+}
+.lof{
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 1rem;
+}
+.brochures-section{
+  padding: 2rem; 
+  background-color: #f9f9f9; 
+  text-align: center;
+}
+.brochures-section img{
+  width: 200px;
+}
+.video-section{
+  padding: 2rem; 
+  text-align: center;
+}
+.video{
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 1rem;
+}
+.ads-section{
+  padding: 1rem; 
+  overflow: hidden; 
+  background-color: #e0f7fa;
+}
