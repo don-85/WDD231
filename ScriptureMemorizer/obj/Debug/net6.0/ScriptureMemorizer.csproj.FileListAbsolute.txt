@@ -1,0 +1,5 @@
+C:\Users\HP\OneDrive\Desktop\WDD231\ScriptureMemorizer\obj\Debug\net6.0\ScriptureMemorizer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\OneDrive\Desktop\WDD231\ScriptureMemorizer\obj\Debug\net6.0\ScriptureMemorizer.AssemblyInfoInputs.cache
+C:\Users\HP\OneDrive\Desktop\WDD231\ScriptureMemorizer\obj\Debug\net6.0\ScriptureMemorizer.AssemblyInfo.cs
+C:\Users\HP\OneDrive\Desktop\WDD231\ScriptureMemorizer\obj\Debug\net6.0\ScriptureMemorizer.csproj.CoreCompileInputs.cache
+C:\Users\HP\OneDrive\Desktop\WDD231\ScriptureMemorizer\obj\Debug\net6.0\ScriptureMemorizer.sourcelink.json
