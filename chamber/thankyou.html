@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You | Kampala Chamber</title>
+  <link rel="stylesheet" href="styles/chembar.css">
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      document.getElementById("name").textContent = `${params.get("fname")} ${params.get("lname")}`;
+      document.getElementById("email").textContent = params.get("email");
+      document.getElementById("phone").textContent = params.get("phone");
+      document.getElementById("organization").textContent = params.get("organization");
+      document.getElementById("timestamp").textContent = params.get("timestamp");
+    });
+  </script>
+</head>
+<body>
+  <header class="topbar">... </header>
+
+  <main class="container">
+    <h1>Thank You for Joining!</h1>
+    <p>Dear <strong id="name"></strong>,</p>
+    <p>We have received your application.</p>
+    <h3>Submission Details:</h3>
+    <ul>
+      <li><strong>Email:</strong> <span id="email"></span></li>
+      <li><strong>Mobile:</strong> <span id="phone"></span></li>
+      <li><strong>Business:</strong> <span id="organization"></span></li>
+      <li><strong>Submitted on:</strong> <span id="timestamp"></span></li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">... </footer>
+</body>
+</html>
