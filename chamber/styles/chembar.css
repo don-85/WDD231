@@ -675,3 +675,30 @@ form input[type="submit"]:hover {
     left: 5%;
   }
 }
+/* Section styling */
+.video-section {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+/* Heading style */
+.video-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Video container styling */
+.video {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* iFrame videos */
+.video iframe {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
