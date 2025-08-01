@@ -1,0 +1,10 @@
+[
+  { "name": "Matoke Bistro", "address": "123 Food St, Kampala", "description": "Authentic Ugandan cuisine with a modern twist.", "image": "images/matoke.webp", "link": "#" },
+  { "name": "Trust & Build Ltd", "address": "45 Builders Rd, Kampala", "description": "Construction and real estate experts.", "image": "images/builders.webp", "link": "#" },
+  { "name": "TechSavvy", "address": "77 IT Lane, Kampala", "description": "Leading provider of IT solutions and consulting.", "image": "images/tech.webp", "link": "#" },
+  { "name": "Equity Alliance", "address": "20 Finance Ave, Kampala", "description": "Financial and banking services for SMEs.", "image": "images/finance.webp", "link": "#" },
+  { "name": "Safari Adventures", "address": "10 Wildlife Rd, Kampala", "description": "Your gateway to Uganda’s wild safaris.", "image": "images/safari.webp", "link": "#" },
+  { "name": "Green Energy Co", "address": "88 Solar Park, Kampala", "description": "Innovative solutions in solar and renewable energy.", "image": "images/solar.webp", "link": "#" },
+  { "name": "Pearl Handcrafts", "address": "5 Artisan St, Kampala", "description": "Beautiful handmade crafts and souvenirs.", "image": "images/crafts.webp", "link": "#" },
+  { "name": "Lake Victoria Tours", "address": "1 Marina Bay, Kampala", "description": "Boat rides and lakeside experiences in Uganda.", "image": "images/lake.webp", "link": "#" }
+]

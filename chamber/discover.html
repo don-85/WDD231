@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kampala Chamber of Commerce | Discover</title>
+  <link rel="stylesheet" href="styles/chembar.css" />
+  <link rel="stylesheet" href="styles/discover.css" />
+
+  <!-- dark-mode toggle -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.querySelector("#theme-toggle");
+      if(toggle){
+        toggle.addEventListener("click", () => {
+          document.documentElement.classList.toggle("dark");
+          toggle.classList.toggle("spin");
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="topbar">
+    <div class="container">
+      <div class="brand">
+        <img src="images/logo.jpg" alt="Kampala Chamber logo" />
+        <span>Kampala Chamber of Commerce</span>
+      </div>
+
+      <nav class="site-nav">
+        <button id="nav-toggle"
+                class="hamburger"
+                aria-label="Toggle navigation"
+                aria-expanded="false">☰
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html" class="active">Discover</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+ <main class="discover-main">
+  <!-- Hero Section -->
+  <section class="hero-discover">
+    <h1>Discover Kampala Chamber of Commerce</h1>
+    <p>
+      Explore the vibrant business landscape of Kampala with our chamber.  
+      Connect with local enterprises, discover opportunities, and learn how  
+      our members shape the economy of Uganda.
+    </p>
+    <p id="last-visit" class="visit-msg"></p>
+  </section>
+
+  <!-- Visitor Stats -->
+  <section class="city-stats">
+    <h2>City & Business Insights</h2>
+    <div class="stats-grid">
+      <div class="stat">
+        <h3>1.5M+</h3>
+        <p>City Population</p>
+      </div>
+      <div class="stat">
+        <h3>50,000+</h3>
+        <p>Registered Businesses</p>
+      </div>
+      <div class="stat">
+        <h3>20+</h3>
+        <p>Annual Networking Events</p>
+      </div>
+      <div class="stat">
+        <h3>15</h3>
+        <p>Years Supporting Local SMEs</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Points of Interest -->
+  <section class="points-of-interest">
+    <h2>Why Discover Kampala?</h2>
+    <div class="poi-grid">
+      <div class="poi">
+        <img src="images/kampala.jpg" alt="Kampala City" loading="lazy">
+        <h3>Vibrant Business Hub</h3>
+        <p>
+          Kampala is a growing economic hub with a mix of international companies  
+          and thriving local enterprises in finance, tech, and hospitality.
+        </p>
+      </div>
+      <div class="poi">
+        <img src="images/network.jpg" alt="Networking Events" loading="lazy">
+        <h3>Business Networking</h3>
+        <p>
+          Join events, trade fairs, and workshops to meet new clients,  
+          find partners, and strengthen your network.
+        </p>
+      </div>
+      <div class="poi">
+        <img src="images/lake.jpg" alt="City Attractions" loading="lazy">
+        <h3>City Attractions</h3>
+        <p>
+          From Lake Victoria to historical landmarks, Kampala offers  
+          a unique blend of culture and business opportunities.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Business Cards from JSON -->
+  <section class="card-grid" id="business-cards">
+    <!-- Cards dynamically loaded from discover.json -->
+  </section>
+</main>
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <address class="contact">
+        <strong>Kampala Chamber of Commerce</strong><br />
+        10 Rue de La Paix<br />
+        Kampala, Mali 999<br />
+        <a href="mailto:info@Kampalascc.org">info@Kampalascc.org</a><br />
+        (223) 555-2300
+      </address>
+
+      <div class="social">
+        <a href="#" aria-label="YouTube">
+          <img src="images/githublogo.png" alt="" />
+        </a>
+        <a href="#" aria-label="Twitter">
+          <img src="images/X_logo.jpg" alt="" />
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <img src="images/linkedin.png" alt="" />
+        </a>
+      </div>
+
+      <div class="meta">
+        WDD 231 Class Project<br />
+        Titus Muntu<br />
+        © 2025 Kampala Chamber of Commerce<br />
+        Last Modification: <span id="last-mod"></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Display Last Modified
+    document.getElementById("last-mod").textContent = document.lastModified;
+
+    // Last Visit LocalStorage
+    const visitMsg = document.getElementById('last-visit');
+    const lastVisit = localStorage.getItem('lastVisit');
+    const now = new Date();
+    if(lastVisit){
+      const days = Math.floor((now - new Date(lastVisit)) / (1000*60*60*24));
+      visitMsg.textContent = `Welcome back! Your last visit was ${days} day(s) ago.`;
+    } else {
+      visitMsg.textContent = "Welcome! This is your first visit.";
+    }
+    localStorage.setItem('lastVisit', now);
+
+    // Load Cards from JSON
+    fetch('data/discover.json')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('business-cards');
+        data.forEach(biz => {
+          const card = document.createElement('div');
+          card.className = 'biz-card';
+          card.innerHTML = `
+            <img src="${biz.image}" alt="${biz.name}" loading="lazy"/>
+            <h3>${biz.name}</h3>
+            <p class="address">${biz.address}</p>
+            <p>${biz.description}</p>
+            <a href="${biz.link}" class="learn-btn">Learn More</a>
+          `;
+          container.appendChild(card);
+        });
+      });
+  </script>
+</body>
+</html>
