@@ -1,1 +1,53 @@
- 
+ /* Large screen layout */
+@media (min-width: 768px) {
+
+  header {
+    flex-wrap: nowrap;
+    padding: 0.5rem 2rem;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  nav ul {
+    display: flex !important;
+    flex-direction: row;
+    background-color: transparent;
+    width: auto;
+  }
+
+  nav ul li {
+    border: none;
+  }
+
+  nav ul li a {
+    padding: 0.5rem 1rem;
+  }
+
+  /* Main grid layout */
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+  }
+
+  main > h1 {
+    grid-column: 1 / -1;
+  }
+
+  /* About me & photo side by side */
+  section:nth-of-type(1),
+  section:nth-of-type(2) {
+    margin: 0;
+  }
+
+  section:nth-of-type(3) {
+    grid-column: 1 / -1;
+  }
+
+  #courses {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
