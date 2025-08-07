@@ -25,6 +25,7 @@ body {
   background: var(--clr-gray-100);
   color: var(--clr-gray-800);
   line-height: 1.5;
+   overflow-x: hidden;
 }
 
 /* ─── Top bar ─── */
@@ -1078,4 +1079,25 @@ body {
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
+}
+/* Mobile menu default */
+.nav-links {
+  display: none;
+  flex-direction: column;
+}
+
+/* Toggle visible */
+.nav-links.active {
+  display: flex;
+}
+.learn-btn {
+  display: inline-block;
+  background: #007BFF;
+  color: #fff;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.learn-btn:hover {
+  background: #0056b3;
 }
