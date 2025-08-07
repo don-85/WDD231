@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Web Development",
+    "category": "Tech",
+    "level": "Beginner",
+    "duration": "8 weeks",
+    "description": "Learn HTML, CSS, and JavaScript from scratch."
+  },
+  {
+    "title": "Crypto Trading",
+    "category": "Trading",
+    "level": "Intermediate",
+    "duration": "6 weeks",
+    "description": "Master trading strategies for Bitcoin and altcoins."
+  }
+]
