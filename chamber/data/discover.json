@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Nile Tech Solutions",
+    "address": "Plot 12, Jinja Rd, Kampala",
+    "description": "Software consultancy specializing in fintech integrations and payment APIs.",
+    "image": "images/cards/nile-tech.webp",
+    "link": "https://example.com/nile-tech"
+  },
+  {
+    "name": "Buganda Coffee Co.",
+    "address": "Market St, Kampala",
+    "description": "Export-grade coffee roastery partnering with smallholder farmers.",
+    "image": "images/cards/buganda-coffee.webp",
+    "link": "https://example.com/buganda-coffee"
+  },
+  {
+    "name": "Victoria Health Labs",
+    "address": "Ggaba Rd, Kampala",
+    "description": "Accredited diagnostics and wellness screenings for SMEs.",
+    "image": "images/cards/victoria-labs.webp",
+    "link": "https://example.com/victoria-labs"
+  },
+  {
+    "name": "KLA Logistics",
+    "address": "Industrial Area, Kampala",
+    "description": "Customs clearance and last-mile delivery across East Africa.",
+    "image": "images/cards/kla-logistics.webp",
+    "link": "https://example.com/kla-logistics"
+  },
+  {
+    "name": "Pearl Hospitality Group",
+    "address": "Nakasero Hill, Kampala",
+    "description": "Conference venues and corporate accommodation.",
+    "image": "images/cards/pearl-hospitality.webp",
+    "link": "https://example.com/pearl-hospitality"
+  },
+  {
+    "name": "Makerere Innovations Hub",
+    "address": "Makerere University, Kampala",
+    "description": "Incubation, mentorship, and investor matchmaking.",
+    "image": "images/cards/mak-innovations.webp",
+    "link": "https://example.com/makerere-innovations"
+  },
+  {
+    "name": "Kampala Green Energy",
+    "address": "Ntinda, Kampala",
+    "description": "Solar EPC projects for commercial rooftops.",
+    "image": "images/cards/kla-green.webp",
+    "link": "https://example.com/kla-green"
+  },
+  {
+    "name": "Luzira Water Ltd.",
+    "address": "Port Bell Rd, Kampala",
+    "description": "Bottled water and dispensers for offices.",
+    "image": "images/cards/luzira-water.webp",
+    "link": "https://example.com/luzira-water"
+  }
+]

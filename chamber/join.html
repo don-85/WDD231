@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Join | Kampala Chamber of Commerce</title>
-  <link rel="stylesheet" href="styles/chembar.css" />
+ <link rel="stylesheet" href="styles/chembar.css" />
+<link rel="stylesheet" href="styles/join.css" />
+
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("timestamp").value = new Date().toISOString();
@@ -58,30 +60,32 @@
   </style> -->
 </head>
 <body>
-  <header class="topbar"><div class="container">
-      <div class="brand">
-        <img src="images/logo.jpg" alt="Kampala Chamber logo" />
-        <span>Kampala Chamber of Commerce</span>
-      </div>
+  <header class="topbar">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="Kampala Chamber of Commerce home">
+        <img src="images/logo.webp" width="48" height="48" alt="Kampala Chamber logo" decoding="async" />
+        <span class="brand-name">Kampala Chamber of Commerce</span>
+      </a>
 
-      <nav class="site-nav">
-  <!-- hamburger -->
-  <button id="nav-toggle"
-          class="hamburger"
-          aria-label="Toggle navigation"
-          aria-expanded="false">
-    ☰
-  </button>
+      <nav class="site-nav" aria-label="Primary">
+        <button id="nav-toggle"
+                class="hamburger"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="nav-links">
+          <span class="hamburger-box" aria-hidden="true"></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html" aria-current="page" class="active">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
 
-  <!-- links -->
-  <ul class="nav-links" id="nav-links">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="directory.html">Directory</a></li>
-    <li><a href="join.html">Join</a></li>
-    <li><a href="discover.html">Discover</a></li>
-  </ul>
-</nav>
- </header>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+    </div>
+  </header>
 
   <main class="container">
     <h1>Join the Chamber</h1>
@@ -162,13 +166,13 @@
       <!-- middle column -->
       <div class="social">
         <a href="#" aria-label="YouTube">
-          <img src="images/githublogo.png" alt="" />
+          <img src="images/githublogo.webp" alt="" />
         </a>
         <a href="#" aria-label="Twitter">
-          <img src="images/X_logo.jpg" alt="" />
+          <img src="images/X_logo.webp" alt="" />
         </a>
         <a href="#" aria-label="LinkedIn">
-          <img src="images/linkedin.png" alt="" />
+          <img src="images/linkedin.webp" alt="" />
         </a>
       </div>
 

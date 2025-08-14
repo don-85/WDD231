@@ -6,7 +6,9 @@
   <title>Kampala Chamber of Commerce | Home</title>
 
   <!-- external styles -->
-  <link rel="stylesheet" href="styles/chembar.css" />
+ <link rel="stylesheet" href="styles/chembar.css" />
+<link rel="stylesheet" href="styles/home.css" />
+
 
   <!-- inline JavaScript (dark-mode toggle) -->
   <script>
@@ -21,33 +23,33 @@
 </head>
 <body>
   <!-- ───── Header/nav bar ───── -->
-  <header class="topbar">
+    <header class="topbar">
     <div class="container">
-      <div class="brand">
-        <img src="images/logo.jpg" alt="Kampala Chamber logo" />
-        <span>Kampala Chamber of Commerce</span>
-      </div>
+      <a class="brand" href="index.html" aria-label="Kampala Chamber of Commerce home">
+        <img src="images/logo.webp" width="48" height="48" alt="Kampala Chamber logo" decoding="async" />
+        <span class="brand-name">Kampala Chamber of Commerce</span>
+      </a>
 
-      <nav class="site-nav">
-  <!-- hamburger -->
-  <button id="nav-toggle"
-          class="hamburger"
-          aria-label="Toggle navigation"
-          aria-expanded="false">
-    ☰
-  </button>
+      <nav class="site-nav" aria-label="Primary">
+        <button id="nav-toggle"
+                class="hamburger"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="nav-links">
+          <span class="hamburger-box" aria-hidden="true"></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" aria-current="page" class="active">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
 
-  <!-- links -->
-  <ul class="nav-links" id="nav-links">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="directory.html">Directory</a></li>
-    <li><a href="join.html">Join</a></li>
-    <li><a href="discover.html">Discover</a></li>
-  </ul>
-</nav>
-</div>
-
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+    </div>
   </header>
+
     <main>
   <!-- Section 1: Hero with Text -->
   <section class="hero-section" style="background: url('images/business.jpg') center/cover no-repeat;" >
@@ -146,13 +148,13 @@
       <!-- middle column -->
       <div class="social">
         <a href="#" aria-label="YouTube">
-          <img src="images/githublogo.png" alt="" />
+          <img src="images/githublogo.webp" alt="" />
         </a>
         <a href="#" aria-label="Twitter">
-          <img src="images/X_logo.jpg" alt="" />
+          <img src="images/X_logo.webp" alt="" />
         </a>
         <a href="#" aria-label="LinkedIn">
-          <img src="images/linkedin.png" alt="" />
+          <img src="images/linkedin.webp" alt="" />
         </a>
       </div>
 

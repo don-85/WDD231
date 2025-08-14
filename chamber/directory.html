@@ -7,6 +7,7 @@
 
   <!-- external styles -->
   <link rel="stylesheet" href="styles/chembar.css" />
+   <link rel="stylesheet" href="styles/directory.css" />
 
   <!-- inline JavaScript (dark-mode toggle) -->
   <script>
@@ -21,34 +22,33 @@
 </head>
 <body>
   <!-- ───── Header/nav bar ───── -->
-  <header class="topbar">
+   <header class="topbar">
     <div class="container">
-      <div class="brand">
-        <img src="images/logo.jpg" alt="Kampala Chamber logo" />
-        <span>Kampala Chamber of Commerce</span>
-      </div>
+      <a class="brand" href="index.html" aria-label="Kampala Chamber of Commerce home">
+        <img src="images/logo.webp" width="48" height="48" alt="Kampala Chamber logo" decoding="async" />
+        <span class="brand-name">Kampala Chamber of Commerce</span>
+      </a>
 
-      <nav class="site-nav">
-  <!-- hamburger -->
-  <button id="nav-toggle"
-          class="hamburger"
-          aria-label="Toggle navigation"
-          aria-expanded="false">
-    ☰
-  </button>
+      <nav class="site-nav" aria-label="Primary">
+        <button id="nav-toggle"
+                class="hamburger"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="nav-links">
+          <span class="hamburger-box" aria-hidden="true"></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html" aria-current="page" class="active">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
 
-  <!-- links -->
-  <ul class="nav-links" id="nav-links">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="directory.html">Directory</a></li>
-    <li><a href="join.html">Join</a></li>
-    <li><a href="discover.html">Discover</a></li>
-  </ul>
-</nav>
-
-      <!-- <button id="theme-toggle" aria-label="Toggle dark mode">⦿</button>
-    </div> -->
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+    </div>
   </header>
+
 
   <!-- ───── Hero section ───── -->
   <section class="hero">

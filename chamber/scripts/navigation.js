@@ -1,35 +1,36 @@
- 
-<script>
-  /* ---------- DATE UTILITIES ---------- */
-  document.addEventListener('DOMContentLoaded', () => {
-    /* © YEAR */
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
+// Accessible hamburger + wayfinding + no horizontal scroll traps
+(function () {
+  const btn = document.getElementById('nav-toggle');
+  const list = document.getElementById('nav-links');
+  if (!btn || !list) return;
 
-    /* LAST-MODIFIED */
-    const mod = new Date(document.lastModified);
-    document.getElementById('lastModified').textContent = mod.toLocaleString('en-GB', {
-      day: '2-digit', month: 'short', year: 'numeric',
-      hour: '2-digit', minute: '2-digit'
-    });
+  const toggle = () => {
+    const open = list.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    if (open) list.querySelector('a')?.focus();
+  };
 
-    /* FIRST CREDIT TALLY */
-    updateCredits();
+  btn.addEventListener('click', toggle);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && list.classList.contains('open')) toggle();
   });
 
-  /* ---------- COURSE FILTERING + CREDITS ---------- */
-  function filterCourses(category) {
-    const groups = document.querySelectorAll('.course-group');
-    groups.forEach(group =>
-      group.classList.toggle('hidden',
-        category !== 'all' && !group.classList.contains(category))
-    );
-    updateCredits();
-  }
+  // Close on link click (improves mobile UX)
+  list.addEventListener('click', (e) => {
+    if (e.target instanceof HTMLAnchorElement) {
+      list.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', 'Open menu');
+    }
+  });
 
-  function updateCredits() {
-    const visibleButtons = document.querySelectorAll('.course-group:not(.hidden) button');
-    const total = [...visibleButtons].reduce((sum, btn) =>
-      sum + Number(btn.dataset.credits || 0), 0);
-    document.getElementById('creditCount').textContent = total;
-  }
-</script>
+  // Wayfinding: ensure current page link gets aria-current
+  const here = location.pathname.split('/').pop() || 'index.html';
+  list.querySelectorAll('a').forEach(a => {
+    if (a.getAttribute('href') === here) {
+      a.setAttribute('aria-current', 'page');
+      a.classList.add('active');
+    }
+  });
+})();

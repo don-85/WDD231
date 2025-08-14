@@ -1,0 +1,122 @@
+/* ──────────────── Home Page Specific Styles ──────────────── */
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+}
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+.hero-section .in-text {
+  position: relative;
+  max-width: 900px;
+  z-index: 1;
+}
+.hero-section h1 {
+  font-size: clamp(1.6rem, 2.5vw + 1rem, 2.4rem);
+  line-height: 1.4;
+}
+
+/* Image Gallery: What We Do */
+.image-gallery {
+  padding: 2rem 0;
+  text-align: center;
+}
+.image-gallery h2 {
+  margin-bottom: 1.5rem;
+}
+.image-gallery div > div {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  max-width: 300px;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.image-gallery div > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Brochures Section */
+.brochures-section {
+  padding: 2rem 0;
+  text-align: center;
+}
+.brochures-section img {
+  max-width: 260px;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease;
+}
+.brochures-section img:hover {
+  transform: scale(1.04);
+}
+
+/* Video Section */
+.video-section {
+  padding: 2rem 0;
+  text-align: center;
+}
+.video-section h2 {
+  margin-bottom: 1.5rem;
+}
+.video-section .video {
+  display: grid;
+  gap: 1rem;
+}
+.video-section iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 0.5rem;
+}
+@media (min-width: 768px) {
+  .video-section .video {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Ads Section */
+.ads-section {
+  padding: 2rem 0;
+  overflow: hidden;
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+#ad-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  will-change: transform;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+#ad-marquee span {
+  display: inline-block;
+  margin-right: 3rem;
+}
+
+/* Footer Adjustments for Home */
+.site-footer {
+  margin-top: 2rem;
+}

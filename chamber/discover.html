@@ -2,193 +2,225 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Kampala Chamber of Commerce — Discover local businesses, events, and city insights." />
   <meta name="author" content="Titus Muntu" />
+  <link rel="canonical" href="./discover.html" />
 
   <title>Kampala Chamber of Commerce | Discover</title>
+
+  <!-- Minimal critical CSS split; full styles in external sheets -->
+  <link rel="preload" href="styles/chembar.css" as="style" />
+  <link rel="preload" href="styles/discover.css" as="style" />
   <link rel="stylesheet" href="styles/chembar.css" />
   <link rel="stylesheet" href="styles/discover.css" />
+
+  <!-- Favicons (tiny, keeps page weight low) -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32" />
+
+  <!-- JS is deferred to avoid blocking rendering -->
   <script src="scripts/navigation.js" defer></script>
-
-
-  <!-- dark-mode toggle -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggle = document.querySelector("#theme-toggle");
-      if(toggle){
-        toggle.addEventListener("click", () => {
-          document.documentElement.classList.toggle("dark");
-          toggle.classList.toggle("spin");
-        });
-      }
-    });
-  </script>
 </head>
 <body>
   <!-- Header -->
   <header class="topbar">
     <div class="container">
-      <div class="brand">
-        <img src="images/logo.jpg" alt="Kampala Chamber logo" />
-        <span>Kampala Chamber of Commerce</span>
-      </div>
+      <a class="brand" href="index.html" aria-label="Kampala Chamber of Commerce home">
+        <img src="images/logo.webp" width="48" height="48" alt="Kampala Chamber logo" decoding="async" />
+        <span class="brand-name">Kampala Chamber of Commerce</span>
+      </a>
 
-      <nav class="site-nav">
+      <nav class="site-nav" aria-label="Primary">
         <button id="nav-toggle"
                 class="hamburger"
-                aria-label="Toggle navigation"
-                aria-expanded="false">☰
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="nav-links">
+          <span class="hamburger-box" aria-hidden="true"></span>
         </button>
         <ul class="nav-links" id="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="directory.html">Directory</a></li>
           <li><a href="join.html">Join</a></li>
-          <li><a href="discover.html" class="active">Discover</a></li>
+          <li><a href="discover.html" aria-current="page" class="active">Discover</a></li>
         </ul>
       </nav>
+
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌓</button>
     </div>
   </header>
 
- <main class="discover-main">
-  <!-- Hero Section -->
-  <section class="hero-discover">
-    <h1>Discover Kampala Chamber of Commerce</h1>
-    <p>
-      Explore the vibrant business landscape of Kampala with our chamber.  
-      Connect with local enterprises, discover opportunities, and learn how  
-      our members shape the economy of Uganda.
-    </p>
-    <p id="last-visit" class="visit-msg"></p>
-  </section>
-
-  <!-- Visitor Stats -->
-  <section class="city-stats">
-    <h2>City & Business Insights</h2>
-    <div class="stats-grid">
-      <div class="stat">
-        <h3>1.5M+</h3>
-        <p>City Population</p>
-      </div>
-      <div class="stat">
-        <h3>50,000+</h3>
-        <p>Registered Businesses</p>
-      </div>
-      <div class="stat">
-        <h3>20+</h3>
-        <p>Annual Networking Events</p>
-      </div>
-      <div class="stat">
-        <h3>15</h3>
-        <p>Years Supporting Local SMEs</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Points of Interest -->
-  <section class="points-of-interest">
-    <h2>Why Discover Kampala?</h2>
-    <div class="poi-grid">
-      <div class="poi">
-        <img src="images/kampala.webp" alt="Kampala City" loading="lazy">
-        <h3>Vibrant Business Hub</h3>
+  <main id="main" class="discover-main">
+    <!-- Hero -->
+    <section class="hero-discover">
+      <div class="hero-inner">
+        <h1>Discover Kampala Chamber of Commerce</h1>
         <p>
-          Kampala is a growing economic hub with a mix of international companies  
-          and thriving local enterprises in finance, tech, and hospitality.
+          Explore Kampala’s vibrant business landscape. Connect with local enterprises, discover opportunities,
+          and see how members shape Uganda’s economy.
         </p>
+        <p id="visit-msg" class="visit-msg" aria-live="polite"></p>
       </div>
-      <div class="poi">
-        <img src="images/network.webp" alt="Networking Events" loading="lazy">
-        <h3>Business Networking</h3>
-        <p>
-          Join events, trade fairs, and workshops to meet new clients,  
-          find partners, and strengthen your network.
-        </p>
-      </div>
-      <div class="poi">
-        <img src="images/lake.webp" alt="City Attractions" loading="lazy">
-        <h3>City Attractions</h3>
-        <p>
-          From Lake Victoria to historical landmarks, Kampala offers  
-          a unique blend of culture and business opportunities.
-        </p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Business Cards from JSON -->
-  <section class="card-grid" id="business-cards">
-    <!-- Cards dynamically loaded from discover.json -->
-  </section>
-</main>
+    <!-- City & Business Insights -->
+    <section aria-labelledby="insights-title" class="city-stats section">
+      <h2 id="insights-title">City &amp; Business Insights</h2>
+      <ul class="stats-grid" role="list">
+        <li class="stat"><h3>1.5M+</h3><p>City Population</p></li>
+        <li class="stat"><h3>50,000+</h3><p>Registered Businesses</p></li>
+        <li class="stat"><h3>20+</h3><p>Annual Networking Events</p></li>
+        <li class="stat"><h3>15</h3><p>Years Supporting SMEs</p></li>
+      </ul>
+    </section>
 
+    <!-- Why Discover -->
+    <section aria-labelledby="why-title" class="points-of-interest section">
+      <h2 id="why-title">Why Discover Kampala?</h2>
+      <ul class="poi-grid" role="list">
+        <li class="poi">
+          <img src="images/kampala.webp" width="640" height="360" alt="Kampala city skyline" loading="lazy" decoding="async" />
+          <h3>Vibrant Business Hub</h3>
+          <p>Kampala blends international firms with thriving local enterprises in finance, tech, and hospitality.</p>
+        </li>
+        <li class="poi">
+          <img src="images/network.webp" width="640" height="360" alt="Professionals networking" loading="lazy" decoding="async" />
+          <h3>Business Networking</h3>
+          <p>Join trade fairs and workshops to meet clients, find partners, and grow your network.</p>
+        </li>
+        <li class="poi">
+          <img src="images/lake.webp" width="640" height="360" alt="Lake Victoria shoreline" loading="lazy" decoding="async" />
+          <h3>City Attractions</h3>
+          <p>From Lake Victoria to historic sites, Kampala mixes culture with business opportunity.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Business Cards (JSON-driven) -->
+    <section aria-labelledby="cards-title" class="cards-wrap section">
+      <div class="cards-head">
+        <h2 id="cards-title">Featured Kampala Businesses</h2>
+        <p class="cards-sub">Browse a selection of members from our chamber directory.</p>
+      </div>
+
+      <!-- Named grid areas container -->
+      <div id="cards" class="card-grid" data-layout="a" aria-live="polite"></div>
+
+      <!-- Layout switcher (for testing named area variations without reload) -->
+      <div class="layout-switch">
+        <button class="layout-btn" data-layout="a" aria-pressed="true">Layout A</button>
+        <button class="layout-btn" data-layout="b">Layout B</button>
+        <button class="layout-btn" data-layout="c">Layout C</button>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <address class="contact">
         <strong>Kampala Chamber of Commerce</strong><br />
-        10 Rue de La Paix<br />
-        Kampala, Mali 999<br />
-        <a href="mailto:info@Kampalascc.org">info@Kampalascc.org</a><br />
-        (223) 555-2300
+        10 Example Road, Central Division<br />
+        Kampala, Uganda<br />
+        <a href="mailto:info@kampalascc.org">info@kampalascc.org</a><br />
+        <span aria-label="Telephone number">+256 200 555 230</span>
       </address>
 
-      <div class="social">
-        <a href="#" aria-label="YouTube">
-          <img src="images/githublogo.png" alt="" />
-        </a>
-        <a href="#" aria-label="Twitter">
-          <img src="images/X_logo.jpg" alt="" />
-        </a>
-        <a href="#" aria-label="LinkedIn">
-          <img src="images/linkedin.png" alt="" />
-        </a>
-      </div>
+      <ul class="social" role="list" aria-label="Social links">
+        <li><a href="#" aria-label="GitHub">
+          <img src="images/githublogo.webp" width="24" height="24" alt="" loading="lazy" decoding="async" />
+        </a></li>
+        <li><a href="#" aria-label="X (Twitter)">
+          <img src="images/x_logo.webp" width="24" height="24" alt="" loading="lazy" decoding="async" />
+        </a></li>
+        <li><a href="#" aria-label="LinkedIn">
+          <img src="images/linkedin.webp" width="24" height="24" alt="" loading="lazy" decoding="async" />
+        </a></li>
+      </ul>
 
       <div class="meta">
-        WDD 231 Class Project<br />
-        Titus Muntu<br />
-        © 2025 Kampala Chamber of Commerce<br />
-        Last Modification: <span id="last-mod"></span>
+        <span>WDD 231 Class Project — Titus Muntu</span><br />
+        <small>© <span id="year"></span> Kampala Chamber of Commerce</small><br />
+        <small>Last Modified: <span id="last-mod"></span></small>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Page JS -->
   <script>
-    // Display Last Modified
-    document.getElementById("last-mod").textContent = document.lastModified;
+    // Year + Last Modified (Best Practices/SEO-friendly and accessible)
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('last-mod').textContent = document.lastModified;
 
-    // Last Visit LocalStorage
-    const visitMsg = document.getElementById('last-visit');
-    const lastVisit = localStorage.getItem('lastVisit');
-    const now = new Date();
-    if(lastVisit){
-      const days = Math.floor((now - new Date(lastVisit)) / (1000*60*60*24));
-      visitMsg.textContent = `Welcome back! Your last visit was ${days} day(s) ago.`;
-    } else {
-      visitMsg.textContent = "Welcome! This is your first visit.";
-    }
-    localStorage.setItem('lastVisit', now);
+    // Dark-mode toggle (persisted)
+    (function () {
+      const root = document.documentElement;
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark') root.classList.add('dark');
 
-    // Load Cards from JSON
-    fetch('data/discover.json')
-      .then(res => res.json())
-      .then(data => {
-        const container = document.getElementById('business-cards');
-        data.forEach(biz => {
-          const card = document.createElement('div');
+      const btn = document.getElementById('theme-toggle');
+      btn?.addEventListener('click', () => {
+        root.classList.toggle('dark');
+        localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+      });
+    })();
+
+    // Last visit (localStorage requirement)
+    (function () {
+      const el = document.getElementById('visit-msg');
+      const last = localStorage.getItem('lastVisit');
+      const now = new Date();
+      if (last) {
+        const days = Math.floor((now - new Date(last)) / 86400000);
+        el.textContent = days === 0
+          ? 'Welcome back! You last visited today.'
+          : `Welcome back! Your last visit was ${days} day(s) ago.`;
+      } else {
+        el.textContent = 'Welcome! This is your first visit.';
+      }
+      localStorage.setItem('lastVisit', now.toISOString());
+    })();
+
+    // Load 8+ cards from JSON (with native lazy-loading)
+    (async function loadCards() {
+      try {
+        const res = await fetch('data/discover.json', { cache: 'no-store' });
+        const data = await res.json();
+        const wrap = document.getElementById('cards');
+
+        data.slice(0, 8).forEach((biz) => {
+          const card = document.createElement('article');
           card.className = 'biz-card';
           card.innerHTML = `
-            <img src="${biz.image}" alt="${biz.name}" loading="lazy"/>
-            <h3>${biz.name}</h3>
-            <p class="address">${biz.address}</p>
-            <p>${biz.description}</p>
-            <a href="${biz.link}" class="learn-btn">Learn More</a>
+            <img src="${biz.image}" width="640" height="360" alt="${biz.name} photo"
+                 loading="lazy" decoding="async" />
+            <div class="card-body">
+              <h3 class="card-title">${biz.name}</h3>
+              <p class="address">${biz.address}</p>
+              <p class="desc">${biz.description}</p>
+              <a class="btn learn-btn" href="${biz.link}" target="_blank" rel="noopener">Learn More</a>
+            </div>
           `;
-          container.appendChild(card);
+          wrap.appendChild(card);
+        });
+      } catch (e) {
+        console.error('Failed to load cards.json', e);
+      }
+    })();
+
+    // Named grid layouts (A/B/C) using data attribute
+    (function () {
+      const grid = document.getElementById('cards');
+      const buttons = document.querySelectorAll('.layout-btn');
+      buttons.forEach((b) => {
+        b.addEventListener('click', () => {
+          buttons.forEach(x => x.setAttribute('aria-pressed', 'false'));
+          b.setAttribute('aria-pressed', 'true');
+          grid.dataset.layout = b.dataset.layout;
         });
       });
+    })();
   </script>
 </body>
 </html>
